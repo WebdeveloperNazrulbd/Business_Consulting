@@ -1,0 +1,39 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.16 error css here
+/*----------------------------------------*/
+.oit-error {
+    &-wrap {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        @media #{$md,$xs}{
+            padding: 90px 20px;
+        }
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 60px;
+        @media #{$lg}{
+            font-size: 55px;
+            & br {
+                display: none;
+            }
+        }
+        @media #{$md}{
+            font-size: 50px;
+            & br {
+                display: none;
+            }
+        }
+        @media #{$xs}{
+            font-size: 32px;
+            & br {
+                display: none;
+            }
+        }
+        @media #{$sm}{
+            font-size: 45px;
+        }
+    }
+}

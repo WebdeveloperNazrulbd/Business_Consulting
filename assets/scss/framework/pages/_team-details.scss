@@ -1,0 +1,463 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.19 team-details css
+/*----------------------------------------*/
+
+.bs-team-area{
+    &.pt-130.pb-130 {
+         @media #{$xl,$lg,$md,$xs}{
+            padding: 90px 0;
+        }
+    }
+    &.innar-style-2 {
+        & .bs-team-active,
+        & .bs-team-active-2 {
+            background-color: transparent;
+        }
+        & .bs-team-item {
+            outline: 3px solid var(--oit-clr-green-soft);
+        }
+    }
+    &.inner-style {
+        & .icx-team-content {
+            &-box {
+                gap: 35px;
+                & p {
+                    font-size: 18px;
+                    @media #{$lg}{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+} 
+.team-inner-style {
+    & .bm-team-item:hover {
+        background-color: var(--oit-clr-green);
+        & .bm-team-title {
+            color: var(--oit-clr-black);
+        }
+        & .bm-team-info {
+            & span {
+                color: var(--oit-clr-black);
+            }
+        }
+    }
+}
+
+
+// team details css here
+
+.team-details {
+    &-area {
+        @media #{$xl,$lg,$md,$xs}{
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+        & .bc-testimonial-progress-wrap {
+            position: relative;
+            margin: 0;
+            & label {
+                top: -35px;
+                font-weight: 600;
+                font-size: 20px;
+                color: var(--oit-clr-deep-teal);
+                @media #{$lg,$md,$xs}{
+                    font-size: 16px;
+                }
+            }
+            & .progress{
+                margin-top: 40px;
+                height: 15px;
+                border-radius: 20px;
+                background: var(--oit-gray-1);
+                border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+                @media #{$lg,$md,$xs}{
+                    height: 10px;
+                }
+            }
+            & .progress-bar{
+                border-radius: 20px;
+                background-color: var(--oit-clr-deep-teal);
+            }
+            & .progress-bar span {
+                top: -37px;
+                font-size: 20px;
+                font-weight: 600;
+                font-family: var(--oit-ff-heading);
+                color: var(--oit-clr-deep-teal);
+                @media #{$lg,$md,$xs}{
+                    font-size: 16px;
+                }
+            }        
+        }
+    }
+    &-contact {
+        display: flex;
+        gap: 8px;
+        padding: 27px 30px;
+        border-bottom: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+        border-inline-end: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+
+        @media #{$xxl,$xl,$lg}{
+            padding: 18px 20px;
+        }
+         @media #{$md}{
+            padding: 15px 10px;
+            gap: 4px;
+        }
+        @media #{$xs}{
+            padding: 18px 20px;
+        }
+        &.social-box {
+             @media #{$md}{
+                gap: 16px;
+            }
+        }
+        &:nth-last-child(-n+3){
+            border-bottom: none;
+        }
+
+        &:nth-child(3n){
+            border-inline-end: none;
+        }
+
+        @media #{$xl,$lg,$md,$xs}{
+
+            &:nth-child(even){
+                border-inline-end: none;
+            }
+            &:nth-child(3n){
+                border-inline-end: 1px solid rgba(#383F3E, .1);
+            }
+            &:nth-last-child(3){
+                border-bottom: 1px solid rgba(#383F3E, .1);
+            }
+        }
+        @media #{$xs}{
+
+            &:nth-child(n){
+                border-inline-end: none;
+            }
+            &:nth-last-child(2){
+                border-bottom: 1px solid rgba(#383F3E, .1);
+            }
+
+        }
+        @media #{$sm}{
+            &:nth-last-child(2){
+                border-bottom: none;
+            }
+            &:nth-child(even){
+                border-inline-start: 1px solid rgba(#383F3E, .1);
+            }
+
+        }
+        & span,a {
+            font-size: 20px;
+            color: var(--oit-clr-dark-navy);
+             @media #{$xxl,$xl,$lg}{
+                font-size: 16px;
+            }
+             @media #{$md}{
+                font-size: 14px;
+            }
+             @media #{$xs}{
+                font-size: 16px;
+            }
+        }
+        & svg {
+            color: var(--oit-clr-green-dark);
+             @media #{$xxl,$xl,$lg,$md,$xs}{
+                height: 18px;
+            }
+             @media #{$md}{
+                height: 14px;
+            }
+            @media #{$xs}{
+                height: 16px;
+            }
+        }
+        & a {
+            & svg {
+                transition: .4s;
+                height: 23px;
+                color: rgba($color: #383F3E, $alpha: .5);
+                 @media #{$xxl,$xl,$lg}{
+                    height: 16px;
+                    width: 16px;
+                }
+                 @media #{$md}{
+                    width: 14px;
+                    height: 14px;
+                }
+                 @media #{$xs}{
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+            &:hover {
+                & svg {
+                    color: var(--oit-clr-deep-teal);
+                }
+            }
+        }
+    }
+    &-contact-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+         @media #{$xl,$lg,$md}{
+           grid-template-columns: repeat(2, 1fr);
+        }
+         @media #{$xs}{
+           grid-template-columns: repeat(1, 1fr);
+        }
+         @media #{$sm}{
+           grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &-author-info {
+        & .title {
+            font-weight: 500;
+            font-size: 45px;
+             @media #{$xxl}{
+                font-size: 38px;
+            }
+             @media #{$xl,$lg,$md}{
+                font-size: 35px;
+            }
+             @media #{$xs}{
+                font-size: 30px;
+            }
+        }
+        & span {
+            font-size: 20px;
+        }
+    }
+    &-thumb {
+        margin-inline-end: -43px;
+        @media #{$xxl,$xl,$lg,$md}{
+            margin-inline-end: 0;
+        }
+        @media #{$xs}{
+            margin-inline-end: 0;
+            margin-bottom: 30px;
+        }
+    }
+    &-content {
+        margin-inline-start: 120px;
+        @media #{$xxl}{
+            margin-inline-start: 30px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            margin-inline-start: 0;
+        }
+    }
+    &-timeline {
+        position: relative;
+        padding: 35px 40px;
+        border-radius: 0 20px 20px 20px;
+        margin-inline-start: 45px;
+        background-color: var(--oit-gray-1);
+        border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+        @media #{$md,$xs}{
+            padding: 25px 20px;
+            border-radius: 0 10px 10px 10px;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: -2%;
+            inset-inline-start: -56px;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            z-index: 1;
+            background-color: var(--oit-clr-deep-teal);
+            @media #{$lg,$md,$xs}{
+                height: 22px;
+                width: 22px;
+                inset-inline-start: -54px;
+            }
+        }
+        &.active {
+            & span {
+                background-color: var(--oit-clr-green);
+            }
+        }
+        & span {
+            font-weight: 500;
+            border-radius: 10000px;
+            padding: 2px 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            color: var(--oit-clr-dark-navy);
+            background-color: #cff8ca;
+        }
+    }
+    &-timeline-wrap {
+        position: relative;
+        
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            inset-inline-start: 0;
+            width: 12px;
+            height: 100%;
+            border-radius: 10000px;
+            background-color: var(--oit-gray-1);
+            border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+            @media #{$lg,$md,$xs}{
+                width: 6px;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            inset-inline-start: 0;
+            width: 12px;
+            height: 36%;
+            border-radius: 10000px;
+            z-index: 1;
+            background-color: var(--oit-clr-deep-teal);
+            @media #{$lg,$md,$xs}{
+                width: 6px;
+            }
+        }
+        & .inner-sm-title {
+            color: var(--oit-clr-deep-teal);
+        }
+    }
+    &-social {
+        display: flex;
+        gap: 10px;
+        & a {
+            @include oit-circle(50px);
+            border-radius: 10px;
+            background-color: var(--oit-clr-white);
+            border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+            @media #{$lg,$md,$xs}{
+               @include oit-circle(40px);
+               border-radius: 10px;
+            }
+            & svg {
+                transition: .4s;
+                height: 16px;
+                color: var(--oit-clr-dark-navy);
+
+            }
+            &:hover {
+                background-color: var(--oit-clr-green-dark);
+                & svg {
+                    color: var(--oit-clr-white);
+                }
+            }
+        }
+    }
+    &-author {
+        &-wrap {
+            padding: 10px;
+            padding-inline-end: 100px;
+            border-radius: 20px;
+            background-color: var(--oit-gray-1);
+            border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+            
+        }
+        &-thumb {
+            height: 100%;
+            margin-inline-end: -30px;
+             @media #{$md,$xs}{
+               margin-inline-end: 0;
+            }
+            & img {
+                height: 100%;
+                object-fit: cover;
+                @media #{$xs}{
+                  width: 100%;
+                }
+            }
+        }
+    }
+    &-style-2 {
+        & .team-details-content {
+            margin-inline-start: 0;
+        }
+        & .team-details-wrap {
+            margin-inline-end: -25px;
+            @media #{$xl,$lg,$md,$xs}{
+                margin-inline-end: 0;
+            }
+        }
+        & .team-details-contact-info {
+            border-radius: 20px;
+            background-color: var(--oit-gray-1);
+             @media #{$md,$xs}{
+               border-radius: 10px;
+            }
+           
+        }
+        & .sv-sidebar-widget-client-box {
+            & .shape {
+                top: -39%;
+                opacity: 0.3;
+                inset-inline-end: auto;
+                inset-inline-start: 50%;
+                transform: translateX(-50%);
+                 @media #{$md,$xs}{
+                    display: none;
+                }
+            }
+
+        }
+        & .team-details-author-info {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-inline-start: 60px;
+            @media #{$xl}{
+                padding-inline-start: 40px;
+            }
+            @media #{$lg}{
+                padding: 30px 0 30px 40px;
+            }
+            @media #{$md,$xs}{
+                padding: 30px 0;
+            }
+            & .title {
+                @media #{$lg,$md,$xs}{
+                    font-size: 27px;
+                    margin-bottom: 0;
+                }
+            }
+            & span {
+                @media #{$lg,$md,$xs}{
+                    font-size: 16px;
+                }
+            }
+        }
+        & .team-details-author-wrap {
+            @media #{$xl}{
+                padding-inline-end: 50px;
+            }
+            @media #{$lg,$md}{
+                padding-inline-end: 20px;
+            }
+            @media #{$xs}{
+                padding-inline-end: 10px;
+            }
+            @media #{$sm}{
+               padding: 30px;
+            }
+        }
+        & .team-details-contact.social-box {
+            @media #{$lg,$md,$xs}{
+               gap: 25px;
+            }
+        }
+    }
+}

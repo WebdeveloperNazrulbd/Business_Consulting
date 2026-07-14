@@ -1,0 +1,88 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.17 faq css
+/*----------------------------------------*/
+
+.faq-innar {  
+    &-area {
+        & .bm-faq-wrap {
+            & .bm-work-accordion {
+                margin-inline-start: 0;
+                & .accordion-item {
+                    border-bottom: none;
+                    border-radius: 10px;
+                    margin-bottom: 30px;
+                    padding: 30px 40px;
+                    background-color: var(--oit-gray-1);
+                     @media #{$xs}{
+                        padding: 30px 20px;
+                    }
+                }
+            }
+        }
+        & .sv-sidebar-widget {
+            padding-bottom: 30px;
+        }
+        & .bm-faq-wrap {
+            margin-inline-start: 75px;
+             @media #{$xl}{
+                margin-inline-start: 30px;
+            } 
+             @media #{$lg,$md,$xs}{
+                margin-inline-start: 0;
+            } 
+            & .accordion-body{
+                padding-inline-end: 0;
+            }
+        }
+        & .bm-work-accordion.mb-120{
+            @media #{$xl,$lg,$md,$xs}{
+                margin-bottom: 60px;
+            } 
+            & .inner-title {
+                @media #{$xl}{
+                    font-size: 36px;
+                } 
+            }
+        }
+    }  
+    &-nav {
+        & button {
+            width: 100%;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 16px 15px;
+            text-align: start;
+            display: flex;
+            gap: 15px;
+            transition: .3s;
+            color: var(--oit-clr-dark-navy);
+            border: 1px solid transparent;
+            @media #{$xs}{
+                font-size: 16px;
+                padding: 10px 15px;
+            } 
+            & svg {
+                color: var(--oit-clr-green-dark);
+                @media #{$xs}{
+                    height: 14px;
+                }
+            }
+            &.active {
+                background-color: var(--oit-clr-white);
+                border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+            }
+        }
+    }
+}
+
+.faq-sidebar {
+    @media #{$md,$xs}{
+        margin-bottom: 80px;
+    } 
+}
+.sidebar-search-box.mb-120{
+    @media #{$md,$xs}{
+        margin-bottom: 60px;
+    } 
+}

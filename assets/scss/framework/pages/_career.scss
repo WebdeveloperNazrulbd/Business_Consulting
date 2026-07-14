@@ -1,0 +1,217 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.11 career css
+/*----------------------------------------*/
+
+.career {
+    &-item {
+        padding: 20px 30px 30px 30px;
+        border-radius: 20px;
+        background-color: var(--oit-clr-white);
+        border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs}{
+            padding: 25px 20px;
+        }
+        @media #{$xs}{
+            padding: 25px 20px;
+        }
+        @media #{$sm}{
+            padding: 40px;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.71;
+            margin-bottom: 35px;
+            margin-inline-end: 40px;
+            letter-spacing: -0.06em;
+             @media #{$xxl,$xl,$lg,$md,$xs}{
+               margin-inline-end: 0;
+            }
+        }
+        & .common-title {
+            @media #{$xxl,$xl,$lg,$md,$xs}{
+               font-size: 25px;
+            }
+        }
+    }
+    &-price {
+        font-size: 14px;
+        border-radius: 5px;
+        padding: 11px 20px;
+        display: inline-block;
+        line-height: 1;
+        color: var(--oit-common-white);
+        background-color: var(--oit-gray-1);
+        border: 1px solid rgba(26, 182, 157, 0.3);
+        @media #{$xs}{
+            margin-bottom: 20px;
+        }
+        @media #{$sm}{
+            margin-bottom: 0;
+        }
+    }
+    &-meta {
+        margin-bottom: 25px;
+        & span {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+            display: inline-block;
+            text-transform: uppercase;
+            @media #{$xxl,$xl,$lg,$md,$xs}{
+                font-size: 12px;
+            }
+            & svg {
+                display: inline-block;
+                margin-right: 5px;
+                @media #{$xxl,$xl,$lg,$md,$xs}{
+                    height: 13px;
+                    width: 13px;
+                }
+            }
+            &:not(:last-child){
+                padding-inline-end: 20px;
+                margin-inline-end: 20px;
+                border-inline-end: 1px solid #D9D9D9;
+                @media #{$xxl,$xl,$lg,$md}{
+                    padding-inline-end: 13px;
+                    margin-inline-end: 13px;
+                }
+                @media #{$xs}{
+                    padding-inline-end: 10px;
+                    margin-inline-end: 10px;
+                }
+            }
+        }
+    }
+    &-area {
+         @media #{$xl,$lg,$md,$xs}{
+            padding-top: 90px;
+            padding-bottom: 70px;
+        } 
+        & .shape-1 {
+            position: absolute;
+            top: 5%;
+            right: 20%;
+        }
+    }
+    &-inner-style {
+        @media #{$xl,$lg,$md,$xs}{
+            padding-top: 90px;
+            padding-bottom: 90px;
+        } 
+        & .bm-faq-wrap {
+            & .bc-schedule-info-wrap {                
+                padding: 50px;
+                padding-bottom: 45px;
+                background-color: var(--oit-clr-black);
+                @media #{$xl,$lg,$md,$xs}{
+                   padding: 35px 25px;
+                } 
+                & p {
+                    color: var(--oit-clr-white);
+                    @media #{$xl,$lg,$md,$xs}{
+                        margin-inline-end: 0;
+                        font-size: 18px;
+                    } 
+                }
+            }
+            & .oit-section-title.fsz-45 {
+                @media #{$xl,$lg,$md,$xs}{
+                    font-size: 30px;
+                } 
+            }
+            & img.author {
+                @media #{$xl,$lg,$md,$xs}{
+                    width: 120px;
+                } 
+            }
+            & .bm-work-accordion .accordion-button span {
+                color: var(--oit-clr-black);
+            }
+            & .bm-work-accordion .accordion-icon {
+                background-color: var(--oit-clr-black);
+            }
+            & .bm-work-accordion {
+                @media #{$xl}{
+                    margin-inline-start: 50px;
+                } 
+                @media #{$lg}{
+                    margin-inline-start: 50px;
+                } 
+                & .number {
+                    font-weight: 400;
+                    color: rgba($color: #383F3E, $alpha: 1);
+                }
+            }
+        }
+        & .fc-faq-style {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    &-details-area.pt-130.pb-130{
+        @media #{$xl,$lg,$md,$xs}{
+            padding-top: 90px;
+            padding-bottom: 90px;
+        } 
+    }
+}
+
+
+.benefit {
+    &-item{
+        padding: 40px 40px;
+        padding-bottom: 35px;
+        border-radius: 10px;
+        background-color: var(--oit-gray-1);
+        @media #{$xl,$lg,$md,$xs}{
+            padding: 30px 20px;
+            padding-bottom: 25px;
+        }      
+    }
+    &-item{
+        & span {
+            @include oit-circle(70px);
+            border-radius: 10px;
+            color: var(--oit-clr-green);
+            background-color: var(--oit-clr-white);
+            border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+            @media #{$xl,$lg,$md,$xs}{
+                @include oit-circle(50px);
+                border-radius: 10px;
+            } 
+            & svg {
+                @media #{$xl,$lg,$md,$xs}{
+                    height: 20px;
+                } 
+            }
+        }
+        & p {
+            padding-inline-end: 60px;
+             @media #{$xxl,$xl,$lg,$md,$xs}{
+                font-size: 16px;
+                padding-inline-end: 0;
+            }
+        }
+        & .common-title {
+            @media #{$xxl,$xl,$lg,$md,$xs}{
+                font-size: 25px;
+            }
+        }
+    }
+    &-area {
+        @media #{$xl,$lg,$md,$xs}{
+            padding-top: 90px;
+            padding-bottom: 65px;
+        }
+    }
+}
+
+.gallery-area {
+    @media #{$xl,$lg,$md,$xs}{
+        padding-top: 90px;
+        padding-bottom: 65px;
+    }
+}

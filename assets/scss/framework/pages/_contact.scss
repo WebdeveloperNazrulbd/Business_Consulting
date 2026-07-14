@@ -1,0 +1,82 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.15 contact details css
+/*----------------------------------------*/
+
+.contact {
+    &-area {
+        @media #{$lg,$md,$xs}{
+            padding: 90px 0;
+        }
+        & .case-study-info  {
+            & a {
+                font-size: 25px;
+                font-weight: 500;
+                display: block;
+                line-height: 1.6;
+                transition: .3s;
+                text-decoration: transparent;
+                color: var(--oit-clr-dark-navy);
+                @media #{$xxl,$xl,$lg,$md,$xs}{
+                    font-size: 18px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            & span {
+                @include oit-circle(90px);
+                border-radius: 10px;
+                background-color: var(--oit-clr-white);
+                border: 1px solid rgba($color: #383F3E, $alpha: 0.1);
+                @media #{$xs}{
+                    @include oit-circle(60px);
+                    border-radius: 10px;
+                }
+                & svg {
+                    @media #{$xs}{
+                        height: 25px;
+                    }
+                }
+            }
+            & p {
+                font-size: 25px;
+                font-weight: 500;
+                line-height: 1.4;
+                color: var(--oit-clr-dark-navy);
+                @media #{$xxl,$xl,$lg,$md,$xs}{
+                    font-size: 18px;
+                }
+            }
+        }
+        & .bi-contact-input-box textarea {
+            height: 240px;
+            @media #{$xs}{
+                height: 200px;
+            }
+        }
+        & .bi-contact-btn p {
+            @media #{$xs}{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.map-area {
+    & iframe{
+        width:100%;
+        height: 660px;
+        border: 0;
+        line-height: 0;
+        filter: grayscale(100%) brightness(65%) contrast(120%);
+        @media #{$xl} {
+            height: 400px;
+        }
+        @media #{$lg,$md} {
+            height: 350px;
+        }
+        @media #{$xs} {
+            height: 250px;
+        }
+    }
+}
