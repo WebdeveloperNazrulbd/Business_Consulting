@@ -1,0 +1,72 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*   breadcrumb
+/*----------------------------------------*/
+
+.oit-breadcrumb {
+    &-nav-link {
+        display: inline-flex;
+        gap: 12px;
+        & a {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.5;
+            color: var(--oit-clr-white);
+            @media #{$lg,$md}{
+                font-size: 16px;
+            }
+            @media #{$xs}{
+                font-size: 14px;
+            }
+        }
+        & svg {
+            color: var(--oit-clr-white);
+        }
+    }
+    &-title {
+        font-weight: 500;
+        font-size: 65px;
+        line-height: 1.15;
+        color: var(--oit-clr-white);
+         @media #{$lg,$md}{
+            font-size: 55px;
+        }
+        @media #{$xs}{
+            font-size: 35px;
+        }
+        @media #{$sm}{
+            font-size: 45px;
+        }
+    }
+    &-wrap {
+        padding: 160px 20px;
+        padding-bottom: 140px;
+        backdrop-filter: blur(40px);
+        background: linear-gradient(209deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+        @media #{$lg,$md}{
+            padding: 100px 20px;
+        }
+        @media #{$xs}{
+            padding: 70px 20px;
+        }
+    }
+    &-meta {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        & span {
+            font-size: 20px;
+            color: var(--oit-clr-white);
+            &:not(:last-child){
+                &::after {
+                    display: inline-block;
+                    content: '';
+                    margin-inline-start: 15px;
+                    @include oit-circle(10px);
+                    background-color: var(--oit-clr-green);
+                }
+            }
+        }
+    }
+}

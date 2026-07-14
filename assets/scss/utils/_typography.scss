@@ -1,0 +1,39 @@
+
+// font url
+$font-link: 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap';
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeueLight.otf') format('woff2'),
+        url('../fonts/HelveticaNeueLight.otf') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue-Medium.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+:root {
+
+  /**========== font family ==============*/
+  --oit-ff-body: 'DM Sans', sans-serif;
+  --oit-ff-heading: 'Helvetica Neue', sans-serif;
+  --oit-ff-helvetica: 'Helvetica Neue', sans-serif;
+  --oit-ff-dm-sans: 'DM Sans', sans-serif;
+  --oit-ff-p: 'DM Sans', sans-serif;
+  --oit-ff-fontawesome: "Font Awesome 6 Pro";
+
+}
+
+
